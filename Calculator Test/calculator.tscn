@@ -1,0 +1,184 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Roboto-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://calculator.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 90
+font_data = ExtResource( 1 )
+
+[node name="calculator" type="Control"]
+anchor_left = -0.00448975
+anchor_right = -0.00448975
+margin_left = 5.37085
+margin_top = 4.1226
+margin_right = 502.371
+margin_bottom = 700.123
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="display" type="Label" parent="."]
+anchor_top = -0.00256006
+anchor_bottom = -0.00256006
+margin_left = 50.0
+margin_top = 51.7818
+margin_right = 449.0
+margin_bottom = 168.782
+custom_fonts/font = SubResource( 1 )
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delet" parent="." instance=ExtResource( 2 )]
+margin_left = 52.0
+margin_top = 182.0
+margin_right = 142.0
+margin_bottom = 272.0
+text = "C"
+
+[node name="Delet2" parent="." instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 182.0
+margin_right = 242.0
+margin_bottom = 272.0
+text = "<"
+
+[node name="divided by" parent="." instance=ExtResource( 2 )]
+anchor_top = -0.00322548
+anchor_bottom = -0.00322548
+margin_left = 252.0
+margin_top = 184.245
+margin_right = 342.0
+margin_bottom = 274.245
+text = "/"
+
+[node name="Times" parent="." instance=ExtResource( 2 )]
+margin_left = 352.0
+margin_top = 182.0
+margin_right = 442.0
+margin_bottom = 272.0
+text = "x"
+
+[node name="Seven" parent="." instance=ExtResource( 2 )]
+margin_left = 52.0
+margin_top = 282.0
+margin_right = 142.0
+margin_bottom = 372.0
+text = "7"
+
+[node name="Eight" parent="." instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 282.0
+margin_right = 242.0
+margin_bottom = 372.0
+text = "8"
+
+[node name="Nine" parent="." instance=ExtResource( 2 )]
+margin_left = 252.0
+margin_top = 282.0
+margin_right = 342.0
+margin_bottom = 372.0
+text = "9"
+
+[node name="Minus" parent="." instance=ExtResource( 2 )]
+margin_left = 352.0
+margin_top = 282.0
+margin_right = 442.0
+margin_bottom = 372.0
+text = "-"
+
+[node name="Four" parent="." instance=ExtResource( 2 )]
+margin_left = 52.0
+margin_top = 382.0
+margin_right = 142.0
+margin_bottom = 472.0
+text = "4"
+
+[node name="Five" parent="." instance=ExtResource( 2 )]
+anchor_top = -0.00322548
+anchor_bottom = -0.00322548
+margin_left = 152.0
+margin_top = 384.245
+margin_right = 242.0
+margin_bottom = 474.245
+text = "5"
+
+[node name="Six" parent="." instance=ExtResource( 2 )]
+margin_left = 252.0
+margin_top = 382.0
+margin_right = 342.0
+margin_bottom = 472.0
+text = "6"
+
+[node name="Plus" parent="." instance=ExtResource( 2 )]
+margin_left = 352.245
+margin_top = 382.285
+margin_right = 442.245
+margin_bottom = 472.285
+text = "+"
+
+[node name="One" parent="." instance=ExtResource( 2 )]
+margin_left = 52.0
+margin_top = 482.0
+margin_right = 142.0
+margin_bottom = 572.0
+text = "1"
+
+[node name="Two" parent="." instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 482.0
+margin_right = 242.0
+margin_bottom = 572.0
+text = "2"
+
+[node name="Three" parent="." instance=ExtResource( 2 )]
+anchor_top = -0.00304439
+anchor_bottom = -0.00304439
+margin_left = 252.0
+margin_top = 484.119
+margin_right = 342.0
+margin_bottom = 574.119
+text = "3"
+
+[node name="Equals" parent="." instance=ExtResource( 2 )]
+margin_left = 352.0
+margin_top = 482.285
+margin_right = 442.0
+margin_bottom = 672.285
+text = "="
+
+[node name="Zero" parent="." instance=ExtResource( 2 )]
+margin_left = 49.9999
+margin_top = 582.285
+margin_right = 240.0
+margin_bottom = 672.285
+
+[node name="Point" parent="." instance=ExtResource( 2 )]
+margin_left = 252.0
+margin_top = 582.285
+margin_right = 342.0
+margin_bottom = 672.285
+text = "."
+
+[connection signal="pressed" from="Delet" to="." method="_on_Delet_pressed"]
+[connection signal="pressed" from="Delet2" to="." method="_on_Delet2_pressed"]
+[connection signal="pressed" from="divided by" to="." method="_on_divided_by_pressed"]
+[connection signal="pressed" from="Times" to="." method="_on_Times_pressed"]
+[connection signal="pressed" from="Seven" to="." method="_on_Seven_pressed"]
+[connection signal="pressed" from="Eight" to="." method="_on_Eight_pressed"]
+[connection signal="pressed" from="Nine" to="." method="_on_Nine_pressed"]
+[connection signal="pressed" from="Minus" to="." method="_on_Minus_pressed"]
+[connection signal="pressed" from="Four" to="." method="_on_Four_pressed"]
+[connection signal="pressed" from="Five" to="." method="_on_Five_pressed"]
+[connection signal="pressed" from="Six" to="." method="_on_Six_pressed"]
+[connection signal="pressed" from="Plus" to="." method="_on_Plus_pressed"]
+[connection signal="pressed" from="One" to="." method="_on_One_pressed"]
+[connection signal="pressed" from="Two" to="." method="_on_Two_pressed"]
+[connection signal="pressed" from="Three" to="." method="_on_Three_pressed"]
+[connection signal="pressed" from="Equals" to="." method="_on_Equals_pressed"]
+[connection signal="pressed" from="Zero" to="." method="_on_Zero_pressed"]
+[connection signal="pressed" from="Point" to="." method="_on_Point_pressed"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Roboto-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+font_data = SubResource( 1 )
+
+[node name="Button" type="Button"]
+margin_left = 7.50169
+margin_top = 9.00339
+margin_right = 97.5017
+margin_bottom = 99.0034
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
